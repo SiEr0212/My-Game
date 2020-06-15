@@ -6,14 +6,14 @@ class Game {
     }
     preloadGame() {
         this.backgroundImgs = [
-          { src: loadImage("/Background.png"), x: 0, speed: 0 },
-          { src: loadImage("/treesbackground1.png"), x: 0, speed: 1 },
-          //{ src: loadImage("assets/background/plx-3.png"), x: 0, speed: 2 },
-          //{ src: loadImage("assets/background/plx-4.png"), x: 0, speed: 3 },
-          //{ src: loadImage("assets/background/plx-5.png"), x: 0, speed: 4 },
+          { src: loadImage("/ASSETS/CLOUDBCG1.png"), x: 0, speed: 3 },
+          { src: loadImage("/ASSETS/CITY2BCG.png"), x: 0, speed: 0 },
+          { src: loadImage("/ASSETS/RUNNINGBCG1.png"), x: 0, speed: 1 },
+          { src: loadImage("/ASSETS/STREETBCG1.png"), x: 0, speed: 2 },
+          { src: loadImage("/ASSETS/ReaperBCG1.png"), x: 0, speed: 0 },
         ];
         //this.playerImg = loadImage("assets/player/run.gif");
-        this.playerImg = loadImage("/reaper.png");
+        this.playerImg = loadImage("/ASSETS/RUNNER1.png");
         //this.coinImg = loadImage("assets/coins/tile004.png");
       }
       setup() {

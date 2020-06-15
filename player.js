@@ -1,9 +1,9 @@
 class Player {
     constructor() {
-      this.gravity = 0.1;
-      this.speed = 0;
+      this.gravity = 0.2;
+      this.speed = 5;
       this.jumps = 0;
-      this.x = 50;
+      this.x = 300;
     }
     setupPlayer() {
       //here i am setting some variables based on the images height and width

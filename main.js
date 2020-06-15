@@ -4,9 +4,17 @@ function preload() {
   game.preloadGame();
 }
 function setup() {
-  createCanvas(1400, 750);
+  createCanvas(windowWidth, windowHeight);
   game.setup();
 }
 function draw() {
   game.drawingGame();
 }
+function windowResized() {
+  resizeCanvas(windowWidth,windowHeight);
+}
+function keyPressed() {
+    if (keyCode == 32) {
+      game.player.jump();
+    }
+  }
