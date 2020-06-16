@@ -2,7 +2,7 @@ class Game {
     constructor() {
       this.background = new Background();
       this.player = new Player();
-      //this.obstacles = [];
+       this.obstacles = [];
     }
     
     preloadGame() {
@@ -27,12 +27,14 @@ class Game {
 
         this.playerImg = //loadImage('/ASSETS/RUN.CHAR1/walk000.png','/ASSETS/RUN.CHAR1/walk001.png','/ASSETS/RUN.CHAR1/walk002.png');
         [
-        {src: loadImage("/ASSETS/RUN.CHAR1/walk000.png")},
-        {src: loadImage("/ASSETS/RUN.CHAR1/walk001.png")},
-        {src: loadImage("/ASSETS/RUN.CHAR1/walk002.png")},
-        //this.coinImg = loadImage("assets/coins/tile004.png");
+        {src: loadImage("/ASSETS/RUN.CHAR1/walk000.png"), speed:5},
+        {src: loadImage("/ASSETS/RUN.CHAR1/walk001.png"), speed: 5},
+        {src: loadImage("/ASSETS/RUN.CHAR1/walk002.png"), speed: 5},
+        
        
       ];
+      
+      this.coinImg = loadImage("/ASSETS/8Bit health potion (Kopie).png");
 
       }
       setup() {
@@ -45,6 +47,29 @@ class Game {
         // console.log("This is already drawing!");
         this.background.drawingBackground();
         this.player.drawingThePlayer();
+        if (frameCount % 20 === 0) {
+          //random function from p5
+          let randomNumber = random(0, height - 60);
+          this.obstacles.push(new Obstacles(randomNumber));
+          //console.log(this.obstacles);
+        }
+        this.obstacles.forEach((elem) => {
+          // we draw all of the obstacles
+          elem.drawingObstacles();
+          elem.checkCollision(this.player);
+        });
+        this.obstacles = this.obstacles.filter((obstacle) => {
+          // here we check if the collision is happening, and if it is happenind we return false to filter the obstacle :D
+          if (obstacle.checkCollision(this.player)) {
+            console.log("happening");
+            return false;
+          } else {
+            // here we keep the obstacles
+            console.log(" not colliding");
+    
+            return true;
+          }
+        });
       }
     }
     

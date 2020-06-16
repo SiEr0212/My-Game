@@ -48,11 +48,12 @@ class Player {
       }
       //let index =0;
       //index = (index + 1) % game.playerImg.length;
+      
       // here i dont pass any width or height into the image function so the image takes the original size of the running man
       //image(game.playerImg, this.x, this.y);
       game.playerImg.forEach(function(elem){
-        image(elem.src);
-        console.log("images are looping");
+        image(elem.src, 300,980);
+        //console.log("images are looping");
       })
       
       
