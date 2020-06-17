@@ -8,10 +8,27 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 function setup() {
+  
   createCanvas(windowWidth, windowHeight);
+  textSize(50);
   game.setup();
+  mode = 0;
 }
 function draw() {
+  clear();
+  if(mode===0){
+    text("Press enter to start", 50%windowWidth,90%windowHeight);
+  
+  }
+  if(mode===2){
+    text("GAME OVER     -      Press enter to play again", 50%windowWidth,90%windowHeight);
+    game.player.x = game.player.x + 10;
+
+  }
+  if (keyIsDown(13)){
+    mode=1;
+  }
+  if (mode ==1){
   textSize(200);
   game.drawingGame();
   if(keyIsDown(32)){
@@ -27,6 +44,12 @@ function draw() {
  }
   if(game.player.x < 90){
     text("GAME OVER", 400, 600);
+    textSize(50);
+    mode = 2;
+  
+    
+
+  
     
     //gameOver();
   }
@@ -41,6 +64,8 @@ function draw() {
   }
   if (game.player.y > windowHeight){
     game.player.y = game.player.y - 90;
-  }
+  }}
+  
 }
+
 

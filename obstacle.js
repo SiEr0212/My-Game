@@ -38,7 +38,7 @@ class Obstacles {
       }
     }
     drawingObstacles() {
-      this.x -= 4;
+      this.x -= 10;
       image(this.img, this.x, this.y, this.width, this.height);
     }
   }

@@ -1,7 +1,7 @@
 class Player {
     constructor() {
-      this.gravity = 0.4;
-      this.speed = 5 ;
+      this.gravity = 0.6;
+      this.speed = 90 ;
       this.jumps = 0;
       this.x = 300;
       this.index=0;
@@ -20,7 +20,7 @@ class Player {
   
       // check how many times the player before touching the ground
       if (this.jumps < 2) {
-        this.speed = -10 ;
+        this.speed = -15 ;
       }
       //console.log("know i am jumping");
   
@@ -55,7 +55,7 @@ class Player {
         this.index++;
         
       }
-      image(game.playerImg[this.index%4].src,this.x,this.y,100,111 );
+      image(game.playerImg[this.index%4].src,this.x,this.y,140,151 );
       
       
     }
