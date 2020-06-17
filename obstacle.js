@@ -1,7 +1,7 @@
 class Obstacles {
     constructor(randomY) {
-      this.x = width;
-      this.y = randomY;
+      this.x = width; 
+      this.y = randomY; 
       this.img = game.coinImg;
       this.width = this.img.width;
       this.height = this.img.height;
@@ -17,26 +17,28 @@ class Obstacles {
       let playerBottomSide = player.y + player.height;
       //console.log(leftSide, playerLeftSide, playerRightSide);
       let xCollision =
-        leftSide > playerLeftSide - 10 &&
-        leftSide < playerRightSide + 10 &&
-        rightSide > playerLeftSide - 10 &&
-        rightSide < playerRightSide + 10;
+        leftSide > playerLeftSide - 60 &&
+        leftSide < playerRightSide + 60 &&
+        rightSide > playerLeftSide - 60 &&
+        rightSide < playerRightSide + 60;
   
       let yCollision =
-        topSide > playerTopSide - 10 &&
-        topSide < playerBottomSide + 10 &&
-        bottomSide > playerTopSide - 10 &&
-        bottomSide < playerBottomSide + 10;
+        topSide > playerTopSide - 60 &&
+        topSide < playerBottomSide + 60 &&
+        bottomSide > playerTopSide - 60 &&
+        bottomSide < playerBottomSide + 60; 
       /*       playerLeftSide > leftSide > playerRightSide &&
         playerLeftSide > rightSide > playerRightSide; */
       if (yCollision && xCollision) {
-        return true;
-      } else {
+        player.x = player.x-40;
+        player.y = player.y +40 ; 
+        //return true;
+      } else { 
         return false;
       }
     }
     drawingObstacles() {
-      this.x -= 2;
+      this.x -= 4;
       image(this.img, this.x, this.y, this.width, this.height);
     }
   }

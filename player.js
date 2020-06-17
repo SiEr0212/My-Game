@@ -1,8 +1,8 @@
 class Player {
     constructor() {
-      this.gravity = 0.2;
+      this.gravity = 0.4;
       this.speed = 5 ;
-      this.jumps = 0    ;
+      this.jumps = 0;
       this.x = 300;
       this.index=0;
       
@@ -10,8 +10,8 @@ class Player {
     setupPlayer() {
       //here i am setting some variables based on the images height and width
       this.y = height - game.playerImg[0].src.height;
-      this.width = game.playerImg.width;
-      this.height = game.playerImg.height;
+      this.width = game.playerImg[0].src.width;
+      this.height = game.playerImg[0].src.height;
       
       //this.playerImg.addAnimation('player',sequenceAnimation);
     }
@@ -47,16 +47,15 @@ class Player {
         //we set the jumps to 0 so we can jump again
         this.jumps = 0;
       }
-      //let index =0;
-      //index = (index + 1) % game.playerImg.length;
+       
       
       // here i dont pass any width or height into the image function so the image takes the original size of the running man
-      //image(game.playerImg, this.x, this.y);
+       
       if(frameCount%2==0){
-        this.index++
+        this.index++;
         
       }
-      image(game.playerImg[this.index%4].src,this.x,this.y,100,100)
+      image(game.playerImg[this.index%4].src,this.x,this.y,100,111 );
       
       
     }

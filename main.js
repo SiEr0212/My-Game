@@ -4,41 +4,43 @@ function preload() {
 game.preloadGame();
   
 }
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 function setup() {
   createCanvas(windowWidth, windowHeight);
   game.setup();
 }
 function draw() {
+  textSize(200);
   game.drawingGame();
   if(keyIsDown(32)){
     game.player.jump();
  }
  if (keyIsDown(39)) {
-     console.log("forward key pressed");
+     //console.log("forward key pressed");
      game.player.moveForward();
  }
  if (keyIsDown(37)) {
-   console.log("backward key pressed");
+   //console.log("backward key pressed");
    game.player.moveBackwards();
  }
-  
-  
-}
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
-/* function keyPressed() {
-  if (keyCode == 32) {
-    game.player.jump();
-  }
-  if (keyCode == 39) {
+  if(game.player.x < 90){
+    text("GAME OVER", 400, 600);
     
-    console.log("forward key pressed");
-    game.player.moveForward();
+    //gameOver();
   }
-  if (keyCode == 37) {
-    
-    console.log("backward key pressed");
-    game.player.moveBackwards();
-  } */
-//}
+  if (game.player.x < 0){
+    game.player.x = game.player.x + 90;
+  }
+  if (game.player.x > windowWidth){
+    game.player.x = game.player.x - 90;
+  }
+  if (game.player.y < 0){
+    game.player.y = game.player.y + 90;
+  }
+  if (game.player.y > windowHeight){
+    game.player.y = game.player.y - 90;
+  }
+}
+
