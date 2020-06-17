@@ -2,7 +2,7 @@ class Game {
     constructor() {
       this.background = new Background();
       this.player = new Player();
-       this.obstacles = [];
+      this.obstacles = [];
     }
     
     preloadGame() {
@@ -34,7 +34,8 @@ class Game {
        
       ];
       
-      this.coinImg = loadImage("/ASSETS/8Bit health potion (Kopie).png");
+      this.coinImg = loadImage("/ASSETS/CRATES/Crates.png");//"/ASSETS/8Bit health potion (Kopie).png"
+      this.crateImg = loadImage("/ASSETS/CRATES/Crates.png");
 
       }
       setup() {

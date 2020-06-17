@@ -10,12 +10,24 @@ function setup() {
 }
 function draw() {
   game.drawingGame();
+  if(keyIsDown(32)){
+    game.player.jump();
+ }
+ if (keyIsDown(39)) {
+     console.log("forward key pressed");
+     game.player.moveForward();
+ }
+ if (keyIsDown(37)) {
+   console.log("backward key pressed");
+   game.player.moveBackwards();
+ }
+  
   
 }
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
-function keyPressed() {
+/* function keyPressed() {
   if (keyCode == 32) {
     game.player.jump();
   }
@@ -26,7 +38,7 @@ function keyPressed() {
   }
   if (keyCode == 37) {
     
-    console.log("forward key pressed");
+    console.log("backward key pressed");
     game.player.moveBackwards();
-  }
-}
+  } */
+//}

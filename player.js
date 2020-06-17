@@ -3,12 +3,13 @@ class Player {
       this.gravity = 0.2;
       this.speed = 5;
       this.jumps = 0;
-      this.x = 500;
+      this.x = 100;
+      this.index=0;
       
     }
     setupPlayer() {
       //here i am setting some variables based on the images height and width
-      this.y = height - game.playerImg.height;
+      this.y = height - game.playerImg[0].src.height;
       this.width = game.playerImg.width;
       this.height = game.playerImg.height;
       
@@ -41,8 +42,8 @@ class Player {
       this.y += this.speed;
       // console.log(this.speed.toFixed(2));
       // this if statement is to check that gravity doesnt affect antonio if he is outside of the canvas :D
-      if (this.y >= height - game.playerImg.height) {
-        this.y = height - game.playerImg.height;
+      if (this.y >= height - game.playerImg[0].src.height) {
+        this.y = height - game.playerImg[0].src.height;
         //we set the jumps to 0 so we can jump again
         this.jumps = 0;
       }
@@ -51,10 +52,11 @@ class Player {
       
       // here i dont pass any width or height into the image function so the image takes the original size of the running man
       //image(game.playerImg, this.x, this.y);
-      game.playerImg.forEach(function(elem){
-        image(elem.src, 300,980);
-        //console.log("images are looping");
-      })
+      if(frameCount%10==0){
+        this.index++
+        
+      }
+      image(game.playerImg[this.index%3].src,this.x,this.y,100,100)
       
       
     }
