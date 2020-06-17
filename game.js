@@ -7,11 +7,11 @@ class Game {
     
     preloadGame() {
         this.backgroundImgs = [
-          { src: loadImage("/ASSETS/CLOUDBCG1.png"), x: 0, speed: 2},
-          { src: loadImage("/ASSETS/CITY2BCG.png"), x: 0, speed: 0 },
-          { src: loadImage("/ASSETS/RUNNINGBCG1.png"), x: 0, speed: 1 },
-          { src: loadImage("/ASSETS/STREETBCG1.png"), x: 0, speed: 2 },
-          { src: loadImage("/ASSETS/ReaperBCG1.png"), x: 0, speed: 0 },
+          { src: loadImage("ASSETS/CLOUDBCG1.png"), x: 0, speed: 2},
+          { src: loadImage("ASSETS/CITY2BCG.png"), x: 0, speed: 0 },
+          { src: loadImage("ASSETS/RUNNINGBCG1.png"), x: 0, speed: 1 },
+          { src: loadImage("ASSETS/STREETBCG1.png"), x: 0, speed: 2 },
+          { src: loadImage("ASSETS/ReaperBCG1.png"), x: 0, speed: 0 },
         ];
         
         //this.playerImg = [];
@@ -27,16 +27,16 @@ class Game {
 
         this.playerImg = //loadImage('/ASSETS/RUN.CHAR1/walk000.png','/ASSETS/RUN.CHAR1/walk001.png','/ASSETS/RUN.CHAR1/walk002.png');
         [
-        {src: loadImage("/ASSETS/newpngplayer/runPlayer001.png"), speed:5},
-        {src: loadImage("/ASSETS/newpngplayer/runPlayer002.png"), speed: 5},
-        {src: loadImage("/ASSETS/newpngplayer/runPlayer003.png"), speed: 5},
-        {src: loadImage("/ASSETS/newpngplayer/runPlayer004.png"), speed: 5},
+        {src: loadImage("ASSETS/newpngplayer/runPlayer001.png"), speed:5},
+        {src: loadImage("ASSETS/newpngplayer/runPlayer002.png"), speed: 5},
+        {src: loadImage("ASSETS/newpngplayer/runPlayer003.png"), speed: 5},
+        {src: loadImage("ASSETS/newpngplayer/runPlayer004.png"), speed: 5},
         
        
       ];
       
-      this.coinImg = loadImage("/ASSETS/CRATES/Crates.png");//"/ASSETS/8Bit health potion (Kopie).png"
-      this.crateImg = loadImage("/ASSETS/CRATES/Crates.png");
+      this.coinImg = loadImage("ASSETS/CRATES/Crates.png");//"/ASSETS/8Bit health potion (Kopie).png"
+      this.crateImg = loadImage("ASSETS/CRATES/Crates.png");
 
       }
       setup() {
