@@ -1,9 +1,9 @@
 class Player {
     constructor() {
       this.gravity = 0.2;
-      this.speed = 5;
-      this.jumps = 0;
-      this.x = 100;
+      this.speed = 5 ;
+      this.jumps = 0    ;
+      this.x = 300;
       this.index=0;
       
     }
@@ -16,11 +16,11 @@ class Player {
       //this.playerImg.addAnimation('player',sequenceAnimation);
     }
     jump() {
-      this.jumps += 1;
+      this.jumps += 1;          
   
       // check how many times the player before touching the ground
       if (this.jumps < 2) {
-        this.speed = -5;
+        this.speed = -10 ;
       }
       //console.log("know i am jumping");
   
@@ -52,11 +52,11 @@ class Player {
       
       // here i dont pass any width or height into the image function so the image takes the original size of the running man
       //image(game.playerImg, this.x, this.y);
-      if(frameCount%10==0){
+      if(frameCount%2==0){
         this.index++
         
       }
-      image(game.playerImg[this.index%3].src,this.x,this.y,100,100)
+      image(game.playerImg[this.index%4].src,this.x,this.y,100,100)
       
       
     }

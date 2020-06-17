@@ -27,9 +27,10 @@ class Game {
 
         this.playerImg = //loadImage('/ASSETS/RUN.CHAR1/walk000.png','/ASSETS/RUN.CHAR1/walk001.png','/ASSETS/RUN.CHAR1/walk002.png');
         [
-        {src: loadImage("/ASSETS/RUN.CHAR1/walk000.png"), speed:5},
-        {src: loadImage("/ASSETS/RUN.CHAR1/walk001.png"), speed: 5},
-        {src: loadImage("/ASSETS/RUN.CHAR1/walk002.png"), speed: 5},
+        {src: loadImage("/ASSETS/newpngplayer/runPlayer001.png"), speed:5},
+        {src: loadImage("/ASSETS/newpngplayer/runPlayer002.png"), speed: 5},
+        {src: loadImage("/ASSETS/newpngplayer/runPlayer003.png"), speed: 5},
+        {src: loadImage("/ASSETS/newpngplayer/runPlayer004.png"), speed: 5},
         
        
       ];

@@ -13,7 +13,7 @@ class Obstacles {
       let playerRightSide = player.x + player.width;
       let topSide = this.y;
       let bottomSide = this.y + this.height;
-      let playerTopSide = player.y;
+      let playerTopSide = player.y;  
       let playerBottomSide = player.y + player.height;
       //console.log(leftSide, playerLeftSide, playerRightSide);
       let xCollision =
