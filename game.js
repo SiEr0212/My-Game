@@ -34,7 +34,7 @@ class Game {
        
       ];
 
-      this.cratesImg = loadImage("ASSETS/CRATES/Crate2.png");
+      //this.cratesImg = loadImage("ASSETS/CRATES/Crate2.png");
        
 
       
