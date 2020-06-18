@@ -55,6 +55,7 @@ function draw() {
   if (gameOver == true) {
     image(gameoverImg, 0, 0, width, height);
     awesomeSound.pause();
+   
     //startGame = false;
     
 
@@ -91,7 +92,8 @@ function draw() {
    //console.log("backward key pressed");
    game.player.moveBackwards();
  }
-  if(game.player.x < 90){
+  if(game.player.x < 150){
+    reaperSound.play();
     gameOver = true;
   }
   
