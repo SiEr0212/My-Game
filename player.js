@@ -1,7 +1,7 @@
 class Player {
     constructor() {
       this.gravity = 0.6;
-      this.speed = 90 ;
+      this.speed = 15 ;
       this.jumps = 0;
       this.x = 300;
       this.index=0;
@@ -12,7 +12,7 @@ class Player {
       this.y = height - game.playerImg[0].src.height;
       this.width = game.playerImg[0].src.width;
       this.height = game.playerImg[0].src.height;
-      awesomeSound.play();
+      //awesomeSound.play();
       
       //this.playerImg.addAnimation('player',sequenceAnimation);
     }
@@ -38,6 +38,12 @@ class Player {
     }
     drawingThePlayer() {
       
+      if(frameCount%2==0){
+        this.index++;
+        
+      }
+      image(game.playerImg[this.index%4].src,this.x,this.y,140,151 );
+      
       //gravity pushes poor antonio down in the canvas
       this.speed += this.gravity;
       this.y += this.speed;
@@ -52,11 +58,7 @@ class Player {
       
       // here i dont pass any width or height into the image function so the image takes the original size of the running man
        
-      if(frameCount%2==0){
-        this.index++;
-        
-      }
-      image(game.playerImg[this.index%4].src,this.x,this.y,140,151 );
+      
       
       
     }
