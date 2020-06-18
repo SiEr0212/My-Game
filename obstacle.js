@@ -5,7 +5,7 @@ class Obstacles {
       this.img =  game.crateImg; //game.obstaclesImg;
       this.width = this.img.width;
       this.height = this.img.height;
-      this.index = 0;
+      //this.index = 0;
     }
     checkCollision(player) {
       let leftSide = this.x;
@@ -40,10 +40,10 @@ class Obstacles {
     }
     drawingObstacles() {
       this.x -= 10;
-      if(frameCount%2==0){
-        this.index++;
+      //if(frameCount%2==0){
+        //this.index++;
         
-      }
+      //}
       //image(game.obstaclesImg[this.index%2].src,this.x,this.y,this.width, this.height);
       image(this.img, this.x, this.y, this.width, this.height);
     }
