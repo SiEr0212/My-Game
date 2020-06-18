@@ -11,6 +11,7 @@ const game = new Game();
 function preload() {
 game.preloadGame();
 startingImg = loadImage("ASSETS/START/startIMG.jpg");
+awesomeSound = loadSound("ASSETS/GAMEMUSIC/501346__foolboymedia__8-bit-ditty.wav");
 }
 
 function windowResized() {
@@ -21,7 +22,9 @@ function setup() {
   
   createCanvas(windowWidth, windowHeight);
   textSize(50);
+ 
   game.setup();
+ 
   //mode = 0;
 }
 function draw() {
@@ -48,8 +51,9 @@ function draw() {
     textSize(100);
     textAlign(CENTER);
     text("GAME OVER ", width / 2, height / 2);
-    text("Press any key to play again");
     fill("white");
+    awesomeSound.pause();
+    //startGame = false;
     
 
     //fill("red");
@@ -57,7 +61,11 @@ function draw() {
     //awesomeSound.pause();
   } else {
     if (startGame == true) {
+      
+      
+      
       game.drawingGame();
+      
     } else {
       // if the game has not started we draw other things like and image or rectangle
       image(startingImg, 0, 0, width, height);
@@ -111,10 +119,11 @@ function draw() {
   
 function keyPressed() {
   if (startGame == false) {
-    //awesomeSound.play();
+    
   }
   // here we set the startGame to true if we press something
   startGame = true;
+  
 
   if (keyCode == 32 && startGame == true) {
     game.player.jump();

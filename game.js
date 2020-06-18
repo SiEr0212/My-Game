@@ -48,6 +48,7 @@ class Game {
       setup() {
         this.player.setupPlayer();
         this.reaper.setupReaper();
+        
       }
       drawingGame() {
         clear();

@@ -12,6 +12,7 @@ class Player {
       this.y = height - game.playerImg[0].src.height;
       this.width = game.playerImg[0].src.width;
       this.height = game.playerImg[0].src.height;
+      awesomeSound.play();
       
       //this.playerImg.addAnimation('player',sequenceAnimation);
     }
