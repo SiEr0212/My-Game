@@ -10,8 +10,8 @@ class Reaper {
       setupReaper() {
         //here i am setting some variables based on the images height and width
         //this.y = height - game.playerImg[0].src.height;
-        this.width = game.playerImg[0].src.width;
-        this.height = game.playerImg[0].src.height;
+        this.width = game.reaperImg[0].src.width;
+        this.height = game.reaperImg[0].src.height;
         
         //this.playerImg.addAnimation('player',sequenceAnimation);
       }

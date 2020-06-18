@@ -34,14 +34,12 @@ class Game {
        
       ];
 
-      this.obstaclesImg =[
-        { src: loadImage("ASSETS/CRATES/Crate2.png")},
-        { src: loadImage("ASSETS/CRATES/Crates.png")},
-       ];
+      this.cratesImg = loadImage("ASSETS/CRATES/Crate2.png");
+       
 
       
       
-      this.coinImg = loadImage("ASSETS/CRATES/Crates.png");//"/ASSETS/8Bit health potion (Kopie).png"
+      this.crateImg = loadImage("ASSETS/CRATES/Crates.png");//"/ASSETS/8Bit health potion (Kopie).png"
 
       
       

@@ -2,9 +2,10 @@ class crates {
     constructor(randomY) {
       this.x = width;
       this.y = randomY;
-      this.img = game.coinImg;
+      this.img = game.cratesImg;
       this.width = this.img.width;
       this.height = this.img.height;
+      this.index = 0;
     }
     checkCollision(player) {
       let leftSide = this.x;
@@ -36,8 +37,13 @@ class crates {
         return false;
       }
     }
-    drawingObstacles() {
+    drawingCrates() {
       this.x -= 4;
+      if(frameCount%2==0){
+        this.index++;
+        
+      }
       image(this.img, this.x, this.y, this.width, this.height);
+      
     }
   }

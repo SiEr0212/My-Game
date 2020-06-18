@@ -2,7 +2,7 @@ class Obstacles {
     constructor(randomY) {
       this.x = width; 
       this.y = randomY; 
-      this.img =  game.obstaclesImg;//game.coinImg; 
+      this.img =  game.crateImg; //game.obstaclesImg;
       this.width = this.img.width;
       this.height = this.img.height;
       this.index = 0;
@@ -44,7 +44,7 @@ class Obstacles {
         this.index++;
         
       }
-      image(game.obstaclesImg[this.index%2].src,this.x,this.y,this.width, this.height);
-      //image(this.img, this.x, this.y, this.width, this.height);
+      //image(game.obstaclesImg[this.index%2].src,this.x,this.y,this.width, this.height);
+      image(this.img, this.x, this.y, this.width, this.height);
     }
   }
