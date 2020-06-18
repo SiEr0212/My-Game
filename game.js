@@ -38,9 +38,8 @@ class Game {
        
 
       
+      this.obstaclesIMG=[loadImage("ASSETS/CRATES/Crates.png"), loadImage("ASSETS/CRATES/Crate2.png")]
       
-      this.crateImg = loadImage("ASSETS/CRATES/Crates.png");//"/ASSETS/8Bit health potion (Kopie).png"
-
       
       
 
@@ -61,7 +60,8 @@ class Game {
         if (frameCount % 20 === 0) {
           //random function from p5
           let randomNumber = random(0, height - 30);
-          this.obstacles.push(new Obstacles(randomNumber));
+          let randomImage = random(this.obstaclesIMG);
+          this.obstacles.push(new Obstacles(randomNumber,randomImage));
           //console.log(this.obstacles);
         }
         this.obstacles.forEach((elem) => {

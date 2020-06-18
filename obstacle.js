@@ -1,8 +1,8 @@
 class Obstacles {
-    constructor(randomY) {
+    constructor(randomY,img) {
       this.x = width; 
       this.y = randomY; 
-      this.img =  game.crateImg; //game.obstaclesImg;
+      this.img =  img; //game.obstaclesImg;
       this.width = this.img.width;
       this.height = this.img.height;
       //this.index = 0;

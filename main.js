@@ -119,11 +119,13 @@ function draw() {
   
 function keyPressed() {
   if (startGame == false) {
-    
+    awesomeSound.play();
   }
   // here we set the startGame to true if we press something
   startGame = true;
-  
+  if(gameOver==true){
+    window.location.reload();
+  }
 
   if (keyCode == 32 && startGame == true) {
     game.player.jump();
