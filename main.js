@@ -119,7 +119,7 @@ function draw() {
   
 function keyPressed() {
   if (startGame == false) {
-    awesomeSound.play();
+    awesomeSound.loop();
   }
   // here we set the startGame to true if we press something
   startGame = true;
