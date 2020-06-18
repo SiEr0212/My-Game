@@ -15,12 +15,12 @@ class Game {
         ];
         
         this.reaperImg= [
-          { src: loadImage("ASSETS/REAPER/reaper001.png"), speed: 0},
-          { src: loadImage("ASSETS/REAPER/reaper002.png"), speed: 0},
-          { src: loadImage("ASSETS/REAPER/reaper003.png"), speed: 0},
-          { src: loadImage("ASSETS/REAPER/reaper004.png"), speed: 0},
-          { src: loadImage("ASSETS/REAPER/reaper005.png"), speed: 0},
-          { src: loadImage("ASSETS/REAPER/reaper006.png"), speed: 0},
+          { src: loadImage("ASSETS/REAPERNEW/reaper001.png"), speed: 0},
+          { src: loadImage("ASSETS/REAPERNEW/reaper002.png"), speed: 0},
+          { src: loadImage("ASSETS/REAPERNEW/reaper003.png"), speed: 0},
+          { src: loadImage("ASSETS/REAPERNEW/reaper004.png"), speed: 0},
+          { src: loadImage("ASSETS/REAPERNEW/reaper005.png"), speed: 0},
+          { src: loadImage("ASSETS/REAPERNEW/reaper006.png"), speed: 0},
         ];
       
     
@@ -38,7 +38,21 @@ class Game {
        
 
       
-      this.obstaclesIMG=[loadImage("ASSETS/CRATES/Crates.png"), loadImage("ASSETS/CRATES/Crate2.png")]
+      this.obstaclesIMG=[loadImage("ASSETS/CRATES/Crates.png"), 
+                         loadImage("ASSETS/CRATES/Crate2.png"),
+                         loadImage("ASSETS/OBSTACLES/kisspng-weapon-pistol-gun-firearm-bit-pixel-gun-5b2d8848271e56.8836323415297106641602.png"),
+                         loadImage("ASSETS/OBSTACLES/PinClipart.com_beer-bottle-clip-art_5228803.png"),
+                         loadImage("ASSETS/OBSTACLES/PinClipart.com_broken-heart-clip-art_5527311.png"),
+                         loadImage("ASSETS/OBSTACLES/PinClipart.com_pill-clip-art_5622027.png"),
+                         loadImage("ASSETS/OBSTACLES/PinClipart.com_poison-apple-clip-art_3568101.png"),
+                         loadImage("ASSETS/OBSTACLES/PinClipart.com_syringe-clipart_2646874.png"),
+                         loadImage("ASSETS/OBSTACLES/PinClipart.com_whiskey-clip-art_4146228.png"),
+                         loadImage("ASSETS/OBSTACLES/pixel-art-5068905_640.png"),
+                         loadImage("ASSETS/OBSTACLES/pngbarn.png"),
+                         loadImage("ASSETS/OBSTACLES/pngflow.com.png"),
+                         loadImage("ASSETS/OBSTACLES/pngkey.com-biohazard-symbol-png-1557234.png"),
+                         loadImage("ASSETS/OBSTACLES/Saw.png"),
+                        ];
       
       
       
