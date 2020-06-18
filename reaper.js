@@ -3,13 +3,13 @@ class Reaper {
     constructor() {
         
         this.x = 20;
-        this.y = 900;
+        //this.y = 870;
         this.index=0;
         
       }
       setupReaper() {
         //here i am setting some variables based on the images height and width
-        //this.y = height - game.playerImg[0].src.height;
+        this.y = windowHeight - game.reaperImg[0].src.height;
         this.width = game.reaperImg[0].src.width;
         this.height = game.reaperImg[0].src.height;
         

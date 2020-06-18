@@ -9,9 +9,10 @@ class Player {
     }
     setupPlayer() {
       //here i am setting some variables based on the images height and width
-      this.y = height - game.playerImg[0].src.height;
-      this.width = game.playerImg[0].src.width;
-      this.height = game.playerImg[0].src.height;
+      this.width = 140;
+      this.height = 151;
+      this.y = windowHeight - this.height;
+
       //awesomeSound.play();
       
       //this.playerImg.addAnimation('player',sequenceAnimation);
@@ -42,15 +43,15 @@ class Player {
         this.index++;
         
       }
-      image(game.playerImg[this.index%4].src,this.x,this.y,140,151 );
+      image(game.playerImg[this.index%4].src,this.x,this.y,this.width,this.height );
       
       //gravity pushes poor antonio down in the canvas
       this.speed += this.gravity;
       this.y += this.speed;
       // console.log(this.speed.toFixed(2));
       // this if statement is to check that gravity doesnt affect antonio if he is outside of the canvas :D
-      if (this.y >= height - game.playerImg[0].src.height) {
-        this.y = height - game.playerImg[0].src.height;
+      if (this.y >= height - this.height) {
+        this.y = height - this.height;
         //we set the jumps to 0 so we can jump again
         this.jumps = 0;
       }
