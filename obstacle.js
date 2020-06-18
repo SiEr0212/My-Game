@@ -2,9 +2,10 @@ class Obstacles {
     constructor(randomY) {
       this.x = width; 
       this.y = randomY; 
-      this.img = game.coinImg;
+      this.img =  game.obstaclesImg;//game.coinImg; 
       this.width = this.img.width;
       this.height = this.img.height;
+      this.index = 0;
     }
     checkCollision(player) {
       let leftSide = this.x;
@@ -39,6 +40,11 @@ class Obstacles {
     }
     drawingObstacles() {
       this.x -= 10;
-      image(this.img, this.x, this.y, this.width, this.height);
+      if(frameCount%2==0){
+        this.index++;
+        
+      }
+      image(game.obstaclesImg[this.index%2].src,this.x,this.y,this.width, this.height);
+      //image(this.img, this.x, this.y, this.width, this.height);
     }
   }

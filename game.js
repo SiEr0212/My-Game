@@ -11,9 +11,7 @@ class Game {
           { src: loadImage("ASSETS/CLOUDBCG1.png"), x: 0, speed: 6},
           { src: loadImage("ASSETS/CITY2BCG.png"), x: 0, speed: 4 },
           { src: loadImage("ASSETS/RUNNINGBCG1.png"), x: 0, speed: 8 },
-          { src: loadImage("ASSETS/STREETBCG1.png"), x: 0, speed: 9 },
-          //{ src: loadImage("ASSETS/ReaperBCG1.png"), x: 0, speed: 0},
-          
+          { src: loadImage("ASSETS/STREETBCG1.png"), x: 0, speed: 9 }
         ];
         
         this.reaperImg= [
@@ -36,9 +34,16 @@ class Game {
        
       ];
 
+      this.obstaclesImg =[
+        { src: loadImage("ASSETS/CRATES/Crate2.png")},
+        { src: loadImage("ASSETS/CRATES/Crates.png")},
+       ];
+
       
       
       this.coinImg = loadImage("ASSETS/CRATES/Crates.png");//"/ASSETS/8Bit health potion (Kopie).png"
+
+      
       
 
       }
