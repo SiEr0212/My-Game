@@ -2,16 +2,18 @@ class Reaper {
     
     constructor() {
         
-        this.x = 20;
+        this.x = 40;
+        //this.x = 20;
         //this.y = 870;
         this.index=0;
         
       }
       setupReaper() {
         //here i am setting some variables based on the images height and width
-        this.width = 240;
-        this.height = 251;
+        this.width = 270;//240;
+        this.height = 281;//251;
         this.y = windowHeight - this.height;
+        
 
         
         //this.playerImg.addAnimation('player',sequenceAnimation);

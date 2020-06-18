@@ -49,15 +49,14 @@ class Player {
       this.speed += this.gravity;
       this.y += this.speed;
       // console.log(this.speed.toFixed(2));
-      // this if statement is to check that gravity doesnt affect antonio if he is outside of the canvas :D
+      // this if statement is to check that gravity doesnt affect the player if he is outside of the canvas :D
       if (this.y >= height - this.height) {
         this.y = height - this.height;
         //we set the jumps to 0 so we can jump again
         this.jumps = 0;
       }
        
-      
-      // here i dont pass any width or height into the image function so the image takes the original size of the running man
+    
        
       
       

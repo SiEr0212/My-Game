@@ -1,17 +1,22 @@
 
 let startGame =false;
 let awesomeSound;
+let reaperSound;
 let gameOver = false;
 let collisionSound;
 let startingImg;
+let gameoverImg;
 
 const game = new Game();
 
 // these thre function are p5 created and they are being called from p5 library! :)
 function preload() {
 game.preloadGame();
-startingImg = loadImage("ASSETS/START/startIMG.jpg");
+startingImg = loadImage("ASSETS/SCREENS/STARTBLACK.png");
+gameoverImg = loadImage("ASSETS/SCREENS/GAMEOVERBLACK.png");
 awesomeSound = loadSound("ASSETS/GAMEMUSIC/501346__foolboymedia__8-bit-ditty.wav");
+reaperSound = loadSound("ASSETS/REAPERNEW/338347__noahw64__demonic-laugh.wav");
+
 }
 
 function windowResized() {
@@ -22,8 +27,9 @@ function setup() {
   
   createCanvas(windowWidth, windowHeight);
   textSize(50);
- 
   game.setup();
+  
+  
  
   //mode = 0;
 }
@@ -47,11 +53,7 @@ function draw() {
     //mode=1;
   //}
   if (gameOver == true) {
-    image(startingImg, 0, 0, width, height);
-    textSize(100);
-    textAlign(CENTER);
-    text("GAME OVER ", width / 2, height / 2);
-    fill("white");
+    image(gameoverImg, 0, 0, width, height);
     awesomeSound.pause();
     //startGame = false;
     
@@ -69,10 +71,6 @@ function draw() {
     } else {
       // if the game has not started we draw other things like and image or rectangle
       image(startingImg, 0, 0, width, height);
-      textSize(70);
-      textAlign(CENTER);
-      text("Please press any key to start! ", width / 2, height / 2);
-      fill("white");
     }
   }
 
@@ -102,7 +100,7 @@ function draw() {
 
   
     
-    //gameOver();
+  
   
   if (game.player.x < 0){
     game.player.x = game.player.x + 90;
@@ -124,7 +122,10 @@ function keyPressed() {
   // here we set the startGame to true if we press something
   startGame = true;
   if(gameOver==true){
+    
+    reaperSound.play();
     window.location.reload();
+    
   }
 
   if (keyCode == 32 && startGame == true) {
@@ -135,6 +136,8 @@ function keyPressed() {
 //document.querySelector("#something").onclick = function () {
   //startGame = true;
 //};
+
+
 
 
 
